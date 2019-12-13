@@ -31,9 +31,9 @@ describe('Header', () => {
 
     it('renders the correct month', () => {
         let today = new Date();
-        let month = today.getMonth();
-        //let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',	'November', 'December'];
-        expect(wrapper.html()).toContain(month);
+        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',	'November', 'December'];
+        let month =  months[today.getMonth()]
+        expect(wrapper.html()).toContain(month.slice(0,3).toUpperCase());
     })
 
    it('renders the correct week day', () => {
